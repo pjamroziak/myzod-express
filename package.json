@@ -25,6 +25,16 @@
   },
   "homepage": "https://github.com/pjamroziak/myzod-express#readme",
   "devDependencies": {
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^26.2.2",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "jest": "^28.1.0",
+    "npm-check-updates": "^13.0.1",
     "typescript": "^4.6.4"
   },
   "dependencies": {
