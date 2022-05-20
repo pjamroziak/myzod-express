@@ -10,17 +10,11 @@ const validateMiddleware = (requestField: RequestField, schema: MyZodSchema, opt
       schema.parse(req[requestField], options?.myzodOptions);
       next();
     } catch (err: unknown) {
-      if (err instanceof Error) {
-        console.log('leel')
-      }
-      if (err instanceof ValidationError) {
-        console.log('leel')
-      }
       const { statusCode, responseObject } = parseResponse(err as ValidationError, options);
       res.status(statusCode).send(responseObject);
       next(err);
     }
-  }
-}
+  };
+};
 
 export default validateMiddleware;

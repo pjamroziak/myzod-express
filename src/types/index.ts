@@ -1,11 +1,17 @@
 import { ObjectType } from 'myzod';
 import { ObjectOptions, PathOptions, ValidationError } from 'myzod/libs/types';
 
-export type MyZodSchema = ObjectType<any>; 
-export type MyZodOptions = ObjectOptions<any> & PathOptions
+type MyZodSchema = ObjectType<any>; 
+type MyZodOptions = ObjectOptions<any> & PathOptions
 
-export type Options = {
+type Options = {
   defaultResponseCode?: number,
   defaultResponseFunc?: (error: ValidationError) => unknown,
   myzodOptions?: MyZodOptions,
+};
+
+export {
+  MyZodOptions,
+  MyZodSchema,
+  Options,
 };

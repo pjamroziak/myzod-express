@@ -4,7 +4,7 @@ import { ParsedResponse } from '../types/common';
 
 const parseResponse = (error: ValidationError, options?: Options): ParsedResponse => {
   let responseObject: unknown = error;
-  let statusCode: number = 400;
+  let statusCode = 400;
 
   if (options) {
     if (options.defaultResponseCode) {
@@ -17,8 +17,8 @@ const parseResponse = (error: ValidationError, options?: Options): ParsedRespons
 
   return {
     statusCode,
-    responseObject
-  }
-}
+    responseObject,
+  };
+};
 
 export default parseResponse;
