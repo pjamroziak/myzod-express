@@ -1,9 +1,9 @@
-import { Options } from '../types';
+import { Options } from '../types/common.type';
 import { ValidationError } from 'myzod';
-import { ParsedResponse } from '../types/common';
+import { ParsedResponse } from '../types/middleware.type';
 
 const parseResponse = (error: ValidationError, options?: Options): ParsedResponse => {
-  let responseObject: unknown = error;
+  let responseObject: unknown;
   let statusCode = 400;
 
   if (options) {
@@ -14,6 +14,8 @@ const parseResponse = (error: ValidationError, options?: Options): ParsedRespons
       responseObject = options.defaultResponseFunc(error);
     }
   }
+
+  responseObject = responseObject ?? JSON.stringify(error);
 
   return {
     statusCode,
