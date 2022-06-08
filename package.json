@@ -1,6 +1,6 @@
 {
   "name": "myzod-express",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MyZod validation middlewares for Express application",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
