@@ -1,2 +1,2 @@
-export { validateQueryParams, validateParams, validateBody } from './middlewares/request.middleware';
-export { MyZodSchema, MyZodOptions, Options} from './types/common.type';
+export { validateRequest } from './middlewares/validate.middleware';
+export { MyZodSchema, MyZodOptions, RequestField, Options} from './types/common.type';

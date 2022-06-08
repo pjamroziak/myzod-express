@@ -1,11 +1,14 @@
 import { ObjectType } from 'myzod';
-import { ObjectOptions, ObjectShape, PathOptions, ValidationError } from 'myzod/libs/types';
+import { ObjectOptions, PathOptions, ValidationError } from 'myzod/libs/types';
 
-export type MyZodSchema = ObjectType<ObjectShape>;
-export type MyZodOptions = ObjectOptions<ObjectShape> & PathOptions;
+export type RequestField = 'params' | 'query' | 'body';
+
+export type MyZodSchema = ObjectType<any>;
+export type MyZodOptions = ObjectOptions<any> & PathOptions;
 
 export type Options = {
   defaultResponseCode?: number;
   defaultResponseFunc?: (error: ValidationError) => unknown;
+  createAndReturnResponse?: boolean;
   myzodOptions?: MyZodOptions;
 };
